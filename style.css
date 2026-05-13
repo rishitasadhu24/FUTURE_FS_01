@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0a1f;
+    color: #f5f3ff;
+}
+
+header {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, rgba(139, 92, 246, 0.35), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.25), transparent 30%),
+        #0f0a1f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: #c084fc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #f5f3ff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #c084fc;
+}
+
+.nav-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #8b5cf6, #c084fc);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-text {
+    color: #c084fc;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-text h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-text span {
+    color: #c084fc;
+}
+
+.description {
+    color: #d6ccff;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+.hero-buttons button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-buttons button:first-child {
+    background: linear-gradient(135deg, #8b5cf6, #c084fc);
+    color: white;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #c084fc !important;
+    color: #c084fc;
+}
+
+.hero-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+}
+
+.glow {
+    width: 180px;
+    height: 180px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    filter: blur(90px);
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+
+.hero-card h3 {
+    margin-bottom: 25px;
+    position: relative;
+    color: #c084fc;
+}
+
+.card-box {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 18px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.card-box h4 {
+    color: #c084fc;
+    margin-bottom: 8px;
+}
+
+.section-card {
+    width: 85%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    padding: 40px;
+    backdrop-filter: blur(12px);
+}
+
+.section-card h2 {
+    margin-bottom: 25px;
+    color: #c084fc;
+}
+
+.section-card p {
+    color: #ddd6fe;
+    line-height: 1.9;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skill {
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #8b5cf6, #c084fc);
+    font-weight: 600;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #c084fc;
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    color: #c084fc;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #8b5cf6, #c084fc);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#success-message {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #c084fc;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #b8a9ff;
+}
+
+@media(max-width: 900px) {
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin: 20px 0;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+}
