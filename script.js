@@ -1,25 +1,78 @@
-function showMessage() {
-    alert("Welcome to Rishita Sadhu's Portfolio Website ✨");
+// TYPING EFFECT
+
+const text = [
+
+  "Frontend Developer",
+  "Python Learner",
+  "UI Designer",
+  "Future Software Engineer"
+
+];
+
+let speed = 100;
+
+let textIndex = 0;
+
+let charIndex = 0;
+
+const typing = document.querySelector(".typing");
+
+function typeWord(){
+
+  if(charIndex < text[textIndex].length){
+
+    typing.textContent +=
+    text[textIndex].charAt(charIndex);
+
+    charIndex++;
+
+    setTimeout(typeWord, speed);
+
+  }
+
+  else{
+
+    setTimeout(eraseWord, 1500);
+
+  }
+
 }
 
-console.log("Portfolio Loaded Successfully");
+function eraseWord(){
 
+  if(charIndex > 0){
 
-const form = document.getElementById("contact-form");
+    typing.textContent =
+    text[textIndex].substring(0, charIndex-1);
 
-const successMessage = document.getElementById("success-message");
+    charIndex--;
 
+    setTimeout(eraseWord, 50);
 
-form.addEventListener("submit", function(event) {
+  }
 
-    event.preventDefault();
+  else{
 
-    successMessage.innerHTML = "✅ Message Sent Successfully!";
+    textIndex++;
 
-    successMessage.style.color = "#ff4d8d";
+    if(textIndex >= text.length){
 
-    successMessage.style.marginTop = "15px";
+      textIndex = 0;
 
-    form.reset();
+    }
+
+    setTimeout(typeWord, 300);
+
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+  if(text.length){
+
+    setTimeout(typeWord,500);
+
+  }
 
 });
